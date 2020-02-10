@@ -1,0 +1,6 @@
+---
+creation_rules:
+        # Encrypt using GCP KMS
+        - aws_kms: kms-cryptokey-path-here
+
+        # For more help look at https://github.com/mozilla/sops
