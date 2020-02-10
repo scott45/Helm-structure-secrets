@@ -1,0 +1,16 @@
+image:
+  pullPolicy: IfNotPresent
+  backend:
+    repository: image-repo-link
+    tag: tag-here
+      - name: DATABASE_URL
+        valueFrom:
+          secretKeyRef:
+            name: production-secrets
+            key: DatabaseUrl
+      - name: SECRET_KEY
+        valueFrom:
+          secretKeyRef:
+            name: production-secrets
+            key: SecretKey
+    
