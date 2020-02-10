@@ -1,0 +1,21 @@
+---
+# app1 Backend service 
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "app1.fullname" . }}-backend
+  labels:
+    app: {{ template "app1.name" . }}-backend
+    chart: {{ template "app1.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "app1.name" . }}-backend
+    release: {{ .Release.Name }}
