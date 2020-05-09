@@ -28,7 +28,7 @@ upgrade:
     -f charts/$(CHART)/$(ENV)/values.yaml \
     -f charts/$(CHART)/$(ENV)/secrets.yaml
 
-## [chart] [environment] Delete  a helm release from store and make it free for later use
+## [chart] [environment] Delete  a helm release from store and make it free for later use (permanently)
 delete:
 	@ echo "$(ENV)-$(CHART)"
 	@ helm delete --purge "$(ENV)-$(CHART)"
