@@ -16,7 +16,7 @@ template:
     -f charts/$(CHART)/$(ENV)/values.yaml \
     -f charts/$(CHART)/$(ENV)/secrets.yaml
 
-## [chart] [environment] Install helm chart to k8s cluster
+## [chart] [environment] Install helm chart to k8s cluster (first time)
 install:
 	@ helm install charts/$(CHART) --name "$(ENV)-$(CHART)" --namespace $(NMSPACE) \
      -f charts/$(CHART)/$(ENV)/values.yaml \
