@@ -7,7 +7,7 @@ init:
 encrypt:
 	@ helm secrets enc charts/$(CHART)/$(ENV)/secrets.yaml
 
-## [chart] [environment] Edit secrets file
+## [chart] [environment] Edit secrets file (when needing to change or add more secrets)
 edit:
 	@ helm secrets edit charts/$(CHART)/$(ENV)/secrets.yaml
 ## [chart] [environment] Preview rendered templates
