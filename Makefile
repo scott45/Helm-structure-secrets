@@ -22,7 +22,7 @@ install:
      -f charts/$(CHART)/$(ENV)/values.yaml \
      -f charts/$(CHART)/$(ENV)/secrets.yaml
 
-## [chart] [environment] Update helm release with new changes
+## [chart] [environment] Update helm release with new changes (rolling new changes)
 upgrade:
 	@ helm upgrade "$(ENV)-$(CHART)" charts/$(CHART) --namespace $(CHART) \
     -f charts/$(CHART)/$(ENV)/values.yaml \
