@@ -1,4 +1,4 @@
-# Helm-structure-secrets.
+# Helm-structure-secrets
 Simple structure showing how to organize your helm charts, use helm secrets. 
 
 Since you plan on using Gitlab Auto-DevOps, it’ll be using helm to deploy the app to k8s. Best way is to override the helm chart used by bundling up a chart into the project repo. 
