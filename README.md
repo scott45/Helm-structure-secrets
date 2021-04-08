@@ -7,6 +7,6 @@ We include a ./chart directory in the root with a chart.yaml that will be automa
 
 Good practice to handle secrets is to use the Helm Secrets plugin. (https://github.com/futuresimple/helm-secrets).
 
-This plugin enables us to encrypt and decrypt secrets. Helm secrets uses KMS keys to achieve that.
+This plugin enables us to encrypt and decrypt secrets. Helm secrets uses KMS keys to achieve that
 
 Note how I organize the the charts and environments
