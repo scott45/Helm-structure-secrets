@@ -9,4 +9,4 @@ Good practice to handle secrets is to use the Helm Secrets plugin. (https://gith
 
 This plugin enables us to encrypt and decrypt secrets. Helm secrets uses KMS keys to achieve that.
 
-Note how I organize the the charts and environments. 
+Note how I organize the the charts and environments
